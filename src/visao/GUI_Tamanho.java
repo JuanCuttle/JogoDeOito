@@ -94,13 +94,17 @@ public class GUI_Tamanho extends JFrame{
 	}
 	
 	public Integer getTamanho() {
-		if(botaoClicado == 2)
+		
+		switch (botaoClicado) {
+		case 2:
 			return 2;
-		if(botaoClicado == 3)
+		case 3:
 			return 3;
-		if(botaoClicado == 4)
+		case 4:
 			return 4;
-		return 5;
+		default:
+			return 5;
+		}
 	}
 	
 	private void fecharJanela() {

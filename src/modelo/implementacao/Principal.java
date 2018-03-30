@@ -7,6 +7,6 @@ public class Principal {
 	public static void main(String[] args){
 		GUI_Tamanho tam = new GUI_Tamanho();
 		Integer tamanho = tam.getTamanho();
-		new GUI_Dificuldade(tamanho);	
+		new GUI_Dificuldade(tamanho);
 	}
 }

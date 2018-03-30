@@ -34,7 +34,7 @@ public class Jogo {
 	}
 
 	// Realiza��o do movimento
-	public void moverPeca(Integer numeroPeca) {
+	public boolean moverPeca(Integer numeroPeca) {
 		Peca movida = this.obterPecaPor(numeroPeca);
 		if (this.eVizinhaDaBranca(movida)) {
 			Integer numeroPecaBranca = this.pecaBranca.getNumero();
@@ -43,6 +43,9 @@ public class Jogo {
 			movida.setNumero(numeroPecaBranca);
 			pecaBranca.setNumero(temp);
 			pecaBranca = this.obterPecaPor((int)Math.pow(tamanho,2));
+			return true;
+		} else{
+			return false;
 		}
 	}
 
